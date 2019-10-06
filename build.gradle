@@ -11,5 +11,18 @@ repositories {
 }
 
 dependencies {
+    // Lombok: For eliminating boilerplate code
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+
+    // SLF4J: Logging api and implementation
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.26'
+    runtime group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.26'
+
+    // jsoup HTML parser library @ https://jsoup.org/
+    compile 'org.jsoup:jsoup:1.12.1'
+
+    // JUnit: Tests
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.mockito', name: 'mockito-core', version:'3.+'
 }
